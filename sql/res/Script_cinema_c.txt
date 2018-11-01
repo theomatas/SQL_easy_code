@@ -1,0 +1,824 @@
+-- remplacer rem commentaires sous Oracle par -- 
+
+-- Structure de la table 'Artiste'
+
+
+CREATE TABLE Artiste (
+   Nom varchar(20) NOT NULL,
+   Prenom varchar(15),
+   Annee_naissance decimal(4,0),
+   PRIMARY KEY (Nom)
+)
+
+
+
+
+-- Contenu de la table 'Artiste'
+
+
+INSERT INTO Artiste VALUES( 'Allen', 'Woody', '1938')
+
+
+INSERT INTO Artiste VALUES( 'Lynch', 'David', '1946')
+
+
+INSERT INTO Artiste VALUES( 'Kusturica', 'Emir', '1959')
+
+
+INSERT INTO Artiste VALUES( 'Lang', 'Fritz', '1899')
+
+
+INSERT INTO Artiste VALUES( 'Eastwood', 'Clint', '1932')
+
+
+INSERT INTO Artiste VALUES( 'Hitchcock', 'Alfred', '1898')
+
+
+INSERT INTO Artiste VALUES( 'Kubrick', 'Stanley', '1935')
+
+
+INSERT INTO Artiste VALUES( 'Curtis', 'Michael', '1902')
+
+
+INSERT INTO Artiste VALUES( 'Stewart', 'James', '1911')
+
+
+INSERT INTO Artiste VALUES( 'Novak', 'Kim', NULL)
+
+
+INSERT INTO Artiste VALUES( 'Hunt', 'Greg', '1950')
+
+
+INSERT INTO Artiste VALUES( 'Tarantino', 'Quentin', '1948')
+
+
+INSERT INTO Artiste VALUES( 'Willis', 'Bruce', '1952')
+
+
+INSERT INTO Artiste VALUES( 'Spielberg', 'Steven', '1943')
+
+
+INSERT INTO Artiste VALUES( 'Hudson', 'Hugh', NULL)
+
+
+INSERT INTO Artiste VALUES( 'Gillian', 'Terry', '1944')
+
+
+INSERT INTO Artiste VALUES( 'Truffaut', 'Francois', '1938')
+
+
+INSERT INTO Artiste VALUES( 'Lambert', 'Christophe', '1953')
+
+
+INSERT INTO Artiste VALUES( 'Keitel', 'Harvey', '1940')
+
+
+INSERT INTO Artiste VALUES( 'Woo', 'John', '1951')
+
+
+INSERT INTO Artiste VALUES( 'Travolta', 'John', '1953')
+
+
+INSERT INTO Artiste VALUES( 'Cage', 'Nicolas', '1954')
+
+
+INSERT INTO Artiste VALUES( 'DiCaprio', 'Leonardo', '1973')
+
+
+INSERT INTO Artiste VALUES( 'Cameron', 'James', '1943')
+
+
+INSERT INTO Artiste VALUES( 'Cruise', 'Tom', '1960')
+
+
+INSERT INTO Artiste VALUES( 'De Palma', 'Brian', '1953')
+
+
+INSERT INTO Artiste VALUES( 'Depp', 'Johnny', '1967')
+
+
+INSERT INTO Artiste VALUES( 'Ricci', 'Christina', '1974')
+
+
+INSERT INTO Artiste VALUES( 'Burton', 'Tim', '1958')
+
+
+
+-- --------------------------------------------------------
+
+-- Structure de la table 'Cinema'
+
+
+CREATE TABLE Cinema (
+   Nom_cinema varchar(10) NOT NULL,
+   Arrondissement decimal(2,0),
+   Adresse varchar(30),
+   PRIMARY KEY (Nom_cinema)
+)
+
+
+
+
+-- Contenu de la table 'Cinema'
+
+
+INSERT INTO Cinema VALUES( 'Rex', '2', '22 Bd Poissoniere')
+
+
+INSERT INTO Cinema VALUES( 'Kino', '15', '3 Bd Raspail')
+
+
+INSERT INTO Cinema VALUES( 'Nations', '12', '3 Rue de Reuilly')
+
+
+INSERT INTO Cinema VALUES( 'Halles', '1', 'Forum des Halles')
+
+
+
+-- Structure de la table 'Film'
+
+
+CREATE TABLE Film (
+   ID_film decimal(10,0) DEFAULT '0' NOT NULL,
+   Titre varchar(30),
+   Annee decimal(4,0),
+   Nom_Realisateur varchar(20),
+   PRIMARY KEY (ID_film)
+)
+
+
+
+
+-- Contenu de la table 'Film'
+
+
+INSERT INTO Film VALUES( '10', 'Annie Hall', '1977', 'Allen')
+
+
+INSERT INTO Film VALUES( '57', 'Brazil', '1984', 'Gillian')
+
+
+INSERT INTO Film VALUES( '5', 'Underground', '1995', 'Kusturica')
+
+
+INSERT INTO Film VALUES( '38', 'Metropolis', '1926', 'Lang')
+
+
+INSERT INTO Film VALUES( '45', 'Impitoyable', '1992', 'Eastwood')
+
+
+INSERT INTO Film VALUES( '65', 'Vertigo', '1958', 'Hitchcock')
+
+
+INSERT INTO Film VALUES( '7', 'Shining', '1980', 'Kubrick')
+
+
+INSERT INTO Film VALUES( '6', 'Psychose', '1960', 'Hitchcock')
+
+
+INSERT INTO Film VALUES( '3', 'Twin Peaks', '1990', 'Lynch')
+
+
+INSERT INTO Film VALUES( '90', 'Casablanca', '1942', 'Curtis')
+
+
+INSERT INTO Film VALUES( '85', 'Greystocke', '1984', 'Hudson')
+
+
+INSERT INTO Film VALUES( '89', 'Le dernier metro', '1980', 'Truffaut')
+
+
+INSERT INTO Film VALUES( '1', 'Reservoir Dogs', '1992', 'Tarantino')
+
+
+INSERT INTO Film VALUES( '43', 'Manhattan', '1979', 'Allen')
+
+
+INSERT INTO Film VALUES( '11', 'Jurassic Park', '1992', 'Spielberg')
+
+
+INSERT INTO Film VALUES( '32', 'Rencontres du 3eme type', '1978', 'Spielberg')
+
+
+INSERT INTO Film VALUES( '33', 'Piege de cristal', '1990', 'Hunt')
+
+
+INSERT INTO Film VALUES( '34', 'Une journee en enfer', '1994', 'Hunt')
+
+
+INSERT INTO Film VALUES( '35', '48 minutes pour vivre', '1992', 'Hunt')
+
+
+INSERT INTO Film VALUES( '73', 'Pulp Fiction', '1995', 'Tarantino')
+
+
+INSERT INTO Film VALUES( '101', 'Broken Arrow', '1996', 'Woo')
+
+
+INSERT INTO Film VALUES( '102', 'Volte-Face', '1997', 'Woo')
+
+
+INSERT INTO Film VALUES( '104', 'Titanic', '1998', 'Cameron')
+
+
+INSERT INTO Film VALUES( '135', 'Mission Impossible 2', '2000', 'Woo')
+
+
+INSERT INTO Film VALUES( '136', 'Mission Impossible', '1997', 'De Palma')
+
+
+INSERT INTO Film VALUES( '142', 'Edward scissorhands', '1990', 'Burton')
+
+
+INSERT INTO Film VALUES( '141', 'Sleepy Hollow', '1999', 'Burton')
+
+
+
+-- Structure de la table 'Role'
+
+
+CREATE TABLE Role (
+   Nom_Role varchar(20) NOT NULL,
+   ID_film decimal(10,0) DEFAULT '0' NOT NULL,
+   Nom_acteur varchar(20) NOT NULL,
+   PRIMARY KEY (ID_film, Nom_acteur)
+)
+
+
+
+
+-- Contenu de la table 'Role'
+
+
+INSERT INTO Role VALUES( 'Bernard', '32', 'Truffaut')
+
+
+INSERT INTO Role VALUES( 'Davis', '43', 'Allen')
+
+
+INSERT INTO Role VALUES( 'Tarzan', '85', 'Lambert')
+
+
+INSERT INTO Role VALUES( 'Ferguson', '65', 'Stewart')
+
+
+INSERT INTO Role VALUES( 'Elster', '65', 'Novak')
+
+
+INSERT INTO Role VALUES( 'Jonas', '10', 'Allen')
+
+
+INSERT INTO Role VALUES( 'McLane', '33', 'Willis')
+
+
+INSERT INTO Role VALUES( 'McLane', '34', 'Willis')
+
+
+INSERT INTO Role VALUES( 'McLane', '35', 'Willis')
+
+
+INSERT INTO Role VALUES( 'Mr Brown', '1', 'Tarantino')
+
+
+INSERT INTO Role VALUES( 'Munny', '45', 'Eastwood')
+
+
+INSERT INTO Role VALUES( 'Mr White', '1', 'Keitel')
+
+
+INSERT INTO Role VALUES( 'Wolf', '73', 'Keitel')
+
+
+INSERT INTO Role VALUES( 'Coolidge', '73', 'Willis')
+
+
+INSERT INTO Role VALUES( 'Vega', '73', 'Travolta')
+
+
+INSERT INTO Role VALUES( 'Deakins', '101', 'Travolta')
+
+
+INSERT INTO Role VALUES( 'Archer', '102', 'Travolta')
+
+
+INSERT INTO Role VALUES( 'Troy', '102', 'Cage')
+
+
+INSERT INTO Role VALUES( 'Dowson', '104', 'DiCaprio')
+
+
+INSERT INTO Role VALUES( 'Howard', '135', 'Cruise')
+
+
+INSERT INTO Role VALUES( 'Howard', '136', 'Cruise')
+
+
+INSERT INTO Role VALUES( 'Crane', '141', 'Depp')
+
+
+INSERT INTO Role VALUES( 'Edward', '142', 'Depp')
+
+
+INSERT INTO Role VALUES( 'Van Tassel', '141', 'Ricci')
+
+
+
+-- Structure de la table 'Salle'
+
+
+CREATE TABLE Salle (
+   Nom_cinema varchar(10) NOT NULL,
+   No_salle decimal(2,0) DEFAULT '0' NOT NULL,
+   Climatise char(1),
+   Capacite decimal(4,0),
+   PRIMARY KEY (Nom_cinema, No_salle)
+)
+
+
+
+-- Contenu de la table 'Salle'
+
+
+INSERT INTO Salle VALUES( 'Rex', '1', 'O', '150')
+
+
+INSERT INTO Salle VALUES( 'Rex', '2', 'O', '100')
+
+
+INSERT INTO Salle VALUES( 'Rex', '3', 'N', '80')
+
+
+INSERT INTO Salle VALUES( 'Rex', '4', 'N', '80')
+
+
+INSERT INTO Salle VALUES( 'Kino', '1', 'N', '280')
+
+
+INSERT INTO Salle VALUES( 'Kino', '2', 'O', '120')
+
+
+INSERT INTO Salle VALUES( 'Kino', '3', 'O', '130')
+
+
+INSERT INTO Salle VALUES( 'Nations', '1', 'O', '130')
+
+
+INSERT INTO Salle VALUES( 'Nations', '2', 'N', '90')
+
+
+INSERT INTO Salle VALUES( 'Nations', '3', 'N', '60')
+
+
+INSERT INTO Salle VALUES( 'Halles', '1', 'O', '75')
+
+
+INSERT INTO Salle VALUES( 'Halles', '2', 'N', '60')
+
+
+INSERT INTO Salle VALUES( 'Halles', '3', 'N', '60')
+
+
+
+-- Structure de la table 'Seance'
+
+
+CREATE TABLE Seance (
+   Nom_cinema varchar(10) NOT NULL,
+   No_salle decimal(2,0) DEFAULT '0' NOT NULL,
+   No_seance decimal(2,0) DEFAULT '0' NOT NULL,
+   Heure_debut decimal(4,2),
+   Heure_fin decimal(4,2),
+   ID_film decimal(10,0) DEFAULT '0' NOT NULL,
+   PRIMARY KEY (Nom_cinema, No_salle, No_seance)
+)
+
+
+
+-- Contenu de la table 'Seance'
+
+
+INSERT INTO Seance VALUES( 'Rex', '1', '3', '9.99', '9.99', '1')
+
+
+INSERT INTO Seance VALUES( 'Rex', '1', '4', '9.99', '9.99', '6')
+
+
+INSERT INTO Seance VALUES( 'Rex', '2', '1', '9.99', '9.99', '34')
+
+
+INSERT INTO Seance VALUES( 'Rex', '2', '2', '9.99', '9.99', '34')
+
+
+INSERT INTO Seance VALUES( 'Rex', '2', '3', '9.99', '9.99', '7')
+
+
+INSERT INTO Seance VALUES( 'Rex', '2', '4', '9.99', '9.99', '65')
+
+
+INSERT INTO Seance VALUES( 'Rex', '3', '1', '9.99', '9.99', '11')
+
+
+INSERT INTO Seance VALUES( 'Rex', '3', '2', '9.99', '9.99', '11')
+
+
+INSERT INTO Seance VALUES( 'Rex', '3', '3', '9.99', '9.99', '11')
+
+
+INSERT INTO Seance VALUES( 'Rex', '4', '1', '9.99', '9.99', '38')
+
+
+INSERT INTO Seance VALUES( 'Rex', '4', '2', '9.99', '9.99', '38')
+
+
+INSERT INTO Seance VALUES( 'Rex', '4', '3', '9.99', '9.99', '38')
+
+
+INSERT INTO Seance VALUES( 'Kino', '1', '1', '9.99', '9.99', '34')
+
+
+INSERT INTO Seance VALUES( 'Kino', '1', '2', '9.99', '9.99', '73')
+
+
+INSERT INTO Seance VALUES( 'Kino', '1', '3', '9.99', '9.99', '34')
+
+
+INSERT INTO Seance VALUES( 'Kino', '2', '1', '9.99', '9.99', '43')
+
+
+INSERT INTO Seance VALUES( 'Kino', '2', '2', '9.99', '9.99', '7')
+
+
+INSERT INTO Seance VALUES( 'Kino', '2', '3', '9.99', '9.99', '43')
+
+
+INSERT INTO Seance VALUES( 'Kino', '3', '1', '9.99', '9.99', '101')
+
+
+INSERT INTO Seance VALUES( 'Kino', '3', '2', '9.99', '9.99', '102')
+
+
+INSERT INTO Seance VALUES( 'Kino', '3', '3', '9.99', '9.99', '104')
+
+
+INSERT INTO Seance VALUES( 'Kino', '3', '4', '9.99', '9.99', '104')
+
+
+INSERT INTO Seance VALUES( 'Nations', '1', '1', '9.99', '9.99', '65')
+
+
+INSERT INTO Seance VALUES( 'Nations', '1', '2', '9.99', '9.99', '65')
+
+
+INSERT INTO Seance VALUES( 'Nations', '1', '3', '9.99', '9.99', '65')
+
+
+INSERT INTO Seance VALUES( 'Nations', '2', '1', '9.99', '9.99', '43')
+
+
+INSERT INTO Seance VALUES( 'Nations', '2', '2', '9.99', '9.99', '43')
+
+
+INSERT INTO Seance VALUES( 'Nations', '2', '3', '9.99', '9.99', '43')
+
+
+INSERT INTO Seance VALUES( 'Nations', '3', '1', '9.99', '9.99', '7')
+
+
+INSERT INTO Seance VALUES( 'Nations', '3', '2', '9.99', '9.99', '7')
+
+
+INSERT INTO Seance VALUES( 'Nations', '3', '3', '9.99', '9.99', '7')
+
+
+INSERT INTO Seance VALUES( 'Halles', '1', '1', '9.99', '9.99', '32')
+
+
+INSERT INTO Seance VALUES( 'Halles', '1', '2', '9.99', '9.99', '32')
+
+
+INSERT INTO Seance VALUES( 'Halles', '1', '3', '9.99', '9.99', '32')
+
+
+INSERT INTO Seance VALUES( 'Halles', '2', '1', '9.99', '9.99', '5')
+
+
+INSERT INTO Seance VALUES( 'Halles', '2', '2', '9.99', '9.99', '5')
+
+
+INSERT INTO Seance VALUES( 'Halles', '2', '3', '9.99', '9.99', '45')
+
+
+INSERT INTO Seance VALUES( 'Halles', '3', '1', '9.99', '9.99', '3')
+
+
+INSERT INTO Seance VALUES( 'Halles', '3', '2', '9.99', '9.99', '3')
+
+
+INSERT INTO Seance VALUES( 'Halles', '3', '3', '9.99', '9.99', '3')
+
+
+
+
+-- 1/1
+SELECT Titre 
+FROM Film 
+ORDER BY Titre ASC
+(u'48 minutes pour vivre',)
+(u'Annie Hall',)
+(u'Brazil',)
+(u'Broken Arrow',)
+(u'Casablanca',)
+(u'Edward scissorhands',)
+(u'Greystocke',)
+(u'Impitoyable',)
+(u'Jurassic Park',)
+(u'Le dernier metro',)
+(u'Manhattan',)
+(u'Metropolis',)
+(u'Mission Impossible',)
+(u'Mission Impossible 2',)
+(u'Piege de cristal',)
+(u'Psychose',)
+(u'Pulp Fiction',)
+(u'Rencontres du 3eme type',)
+(u'Reservoir Dogs',)
+(u'Shining',)
+(u'Sleepy Hollow',)
+(u'Titanic',)
+(u'Twin Peaks',)
+(u'Underground',)
+(u'Une journee en enfer',)
+(u'Vertigo',)
+(u'Volte-Face',)
+
+
+
+-- 1/2
+SELECT Nom, Annee_naissance 
+FROM Artiste
+WHERE Annee_naissance < 1950
+(u'Allen', 1938)
+(u'Lynch', 1946)
+(u'Lang', 1899)
+(u'Eastwood', 1932)
+(u'Hitchcock', 1898)
+(u'Kubrick', 1935)
+(u'Curtis', 1902)
+(u'Stewart', 1911)
+(u'Tarantino', 1948)
+(u'Spielberg', 1943)
+(u'Gillian', 1944)
+(u'Truffaut', 1938)
+(u'Keitel', 1940)
+(u'Cameron', 1943)
+
+
+
+-- 1/3
+SELECT * 
+FROM Cinema
+WHERE Arrondissement = 12
+(u'Nations', 12, u'3 Rue de Reuilly')
+
+
+
+-- 1/4
+SELECT * 
+FROM Artiste
+WHERE Nom LIKE 'H%'
+(u'Hitchcock', u'Alfred', 1898)
+(u'Hunt', u'Greg', 1950)
+(u'Hudson', u'Hugh', None)
+
+
+
+-- 1/5
+SELECT *
+FROM Artiste
+WHERE Annee_naissance IS NULL
+(u'Novak', u'Kim', None)
+(u'Hudson', u'Hugh', None)
+
+
+
+-- 1/6
+SELECT COUNT(*) 
+FROM Role 
+WHERE UPPER(Nom_Role) = 'MCLANE' AND  UPPER(Nom_acteur) = 'WILLIS'
+(3,)
+
+
+
+-- 2/1
+SELECT Nom, Prenom  
+FROM Artiste LEFT JOIN Role ON Artiste.Nom = Role.Nom_acteur 
+WHERE UPPER(Nom_Role) = 'TARZAN'
+(u'Lambert', u'Christophe')
+
+
+
+-- 2/2
+SELECT Nom_acteur  
+FROM Role NATURAL JOIN Film  
+WHERE UPPER(Titre) = 'VERTIGO'
+(u'Novak',)
+(u'Stewart',)
+
+
+
+-- 2/3
+SELECT Titre, Heure_debut  
+FROM Film NATURAL JOIN Seance 
+WHERE UPPER(Nom_cinema) = 'REX'
+(u'Reservoir Dogs', 9.99)
+(u'Psychose', 9.99)
+(u'Une journee en enfer', 9.99)
+(u'Une journee en enfer', 9.99)
+(u'Shining', 9.99)
+(u'Vertigo', 9.99)
+(u'Jurassic Park', 9.99)
+(u'Jurassic Park', 9.99)
+(u'Jurassic Park', 9.99)
+(u'Metropolis', 9.99)
+(u'Metropolis', 9.99)
+(u'Metropolis', 9.99)
+
+
+
+-- 2/4
+SELECT Titre, Nom_Role 
+FROM Film NATURAL JOIN Role
+WHERE UPPER(Nom_acteur) = 'ALLEN'
+(u'Manhattan', u'Davis')
+(u'Annie Hall', u'Jonas')
+
+
+
+-- 2/5
+SELECT Nom_acteur, Nom_Role, Titre 
+FROM Film NATURAL JOIN Role 
+WHERE UPPER(Nom_acteur) = UPPER(Nom_Realisateur)
+(u'Allen', u'Davis', u'Manhattan')
+(u'Allen', u'Jonas', u'Annie Hall')
+(u'Tarantino', u'Mr Brown', u'Reservoir Dogs')
+(u'Eastwood', u'Munny', u'Impitoyable')
+
+
+
+-- 2/7
+SELECT Nom_cinema, Adresse, Heure_debut   
+FROM Cinema NATURAL JOIN Seance NATURAL JOIN Film 
+WHERE UPPER(Titre) = 'SHINING'
+(u'Rex', u'22 Bd Poissoniere', 9.99)
+(u'Kino', u'3 Bd Raspail', 9.99)
+(u'Nations', u'3 Rue de Reuilly', 9.99)
+(u'Nations', u'3 Rue de Reuilly', 9.99)
+(u'Nations', u'3 Rue de Reuilly', 9.99)
+
+
+
+-- 2/8
+SELECT Titre,Nom_Realisateur,Nom_Realisateur FROM Film
+WHERE Nom_Realisateur IN (SELECT Nom_acteur FROM Film,Role
+WHERE Film.ID_film == Role.ID_film)
+(u'Annie Hall', u'Allen', u'Allen')
+(u'Impitoyable', u'Eastwood', u'Eastwood')
+(u'Le dernier metro', u'Truffaut', u'Truffaut')
+(u'Reservoir Dogs', u'Tarantino', u'Tarantino')
+(u'Manhattan', u'Allen', u'Allen')
+(u'Pulp Fiction', u'Tarantino', u'Tarantino')
+
+
+
+-- 2/9
+SELECT Nom_cinema, Adresse, Heure_debut  
+FROM Role NATURAL JOIN Seance NATURAL JOIN Cinema 
+WHERE UPPER(Nom_acteur) = 'EASTWOOD'
+(u'Halles', u'Forum des Halles', 9.99)
+
+
+
+-- 2/10
+SELECT Nom_cinema, No_salle, Heure_debut, Titre 
+FROM Cinema NATURAL JOIN Salle NATURAL JOIN Seance NATURAL JOIN Film 
+WHERE Arrondissement = 12 AND Climatise = 'O'
+(u'Nations', 1, 9.99, u'Vertigo')
+(u'Nations', 1, 9.99, u'Vertigo')
+(u'Nations', 1, 9.99, u'Vertigo')
+
+
+
+-- 2/11
+SELECT DISTINCT Adresse, Arrondissement  
+FROM Cinema NATURAL JOIN Salle NATURAL JOIN Seance NATURAL JOIN Film NATURAL JOIN Role 
+WHERE Capacite > 150 AND UPPER(Nom_acteur) = 'WILLIS'
+(u'3 Bd Raspail', 15)
+
+
+
+-- 2/12
+SELECT DISTINCT Nom_cinema, Adresse 
+FROM Cinema NATURAL JOIN Salle
+WHERE Capacite > 100
+(u'Kino', u'3 Bd Raspail')
+(u'Nations', u'3 Rue de Reuilly')
+(u'Rex', u'22 Bd Poissoniere')
+
+
+
+
+-- 3/1
+SELECT *  
+FROM Artiste 
+WHERE Nom NOT IN (SELECT Nom_Realisateur FROM Film)
+(u'Stewart', u'James', 1911)
+(u'Novak', u'Kim', None)
+(u'Willis', u'Bruce', 1952)
+(u'Lambert', u'Christophe', 1953)
+(u'Keitel', u'Harvey', 1940)
+(u'Travolta', u'John', 1953)
+(u'Cage', u'Nicolas', 1954)
+(u'DiCaprio', u'Leonardo', 1973)
+(u'Cruise', u'Tom', 1960)
+(u'Depp', u'Johnny', 1967)
+(u'Ricci', u'Christina', 1974)
+
+
+
+-- 3/2
+
+SELECT Nom_cinema,Adresse FROM Cinema 
+WHERE Nom_cinema NOT IN 
+(SELECT DISTINCT Nom_cinema FROM Seance INNER JOIN Film WHERE Nom_Realisateur == 'Tarantino')
+
+
+
+
+-- 4/1
+SELECT SUM(Capacite) 
+FROM Salle 
+WHERE Nom_cinema = 'Rex'
+(410,)
+
+
+
+
+
+-- 4/2
+SELECT MIN(Annee), Max(Annee) 
+FROM Film
+(1926, 2000)
+
+
+
+-- 4/3
+SELECT Nom_cinema, SUM(Capacite) 
+FROM Salle 
+GROUP BY Nom_cinema
+(u'Halles', 195)
+(u'Kino', 530)
+(u'Nations', 280)
+(u'Rex', 410)
+
+
+
+-- 4/4
+SELECT Nom, Prenom, COUNT(Nom) 
+FROM Film LEFT JOIN Artiste ON Film.Nom_Realisateur = Artiste.Nom 
+GROUP BY Nom_Realisateur
+(u'Allen', u'Woody', 2)
+(u'Burton', u'Tim', 2)
+(u'Cameron', u'James', 1)
+(u'Curtis', u'Michael', 1)
+(u'De Palma', u'Brian', 1)
+(u'Eastwood', u'Clint', 1)
+(u'Gillian', u'Terry', 1)
+(u'Hitchcock', u'Alfred', 2)
+(u'Hudson', u'Hugh', 1)
+(u'Hunt', u'Greg', 3)
+(u'Kubrick', u'Stanley', 1)
+(u'Kusturica', u'Emir', 1)
+(u'Lang', u'Fritz', 1)
+(u'Lynch', u'David', 1)
+(u'Spielberg', u'Steven', 2)
+(u'Tarantino', u'Quentin', 2)
+(u'Truffaut', u'Francois', 1)
+(u'Woo', u'John', 3)
+
+
+
+-- 4/5
+SELECT Nom_cinema, COUNT(*)  
+FROM Cinema NATURAL JOIN Salle 
+GROUP BY Nom_cinema HAVING COUNT(Climatise) > 1
+(u'Halles', 3)
+(u'Kino', 3)
+(u'Nations', 3)
+(u'Rex', 4)
+
+
+
+-- 4/6
+
+-- 5/1
+
