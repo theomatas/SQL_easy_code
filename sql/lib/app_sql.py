@@ -32,11 +32,10 @@ def parser(text):
     lst = []
     line = ""
     for char in text:
+        line += char
         if char == ';':
             lst.append(line)
             line = ""
-        else:
-            line += char
     lst.append(line)
     return lst
             
