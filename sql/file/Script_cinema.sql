@@ -359,4 +359,11 @@ GROUP BY Nom_cinema HAVING COUNT(Climatise) > 1;
 
 -- 4/6
 
+SELECT Nom,Prenom 
+FROM artiste WHERE Nom IN (SELECT Nom_acteur 
+FROM (SELECT ID_film, Nom_acteur,COUNT(Nom_acteur) AS counter 
+FROM (SELECT ID_film, Nom_acteur 
+FROM role WHERE ID_Film IN (SELECT ID_Film 
+FROM film WHERE Annee > 1984)) GROUP BY Nom_acteur) WHERE counter >= 3);
+
 -- 5/1

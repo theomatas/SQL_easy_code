@@ -1,5 +1,4 @@
 DROP TABLE STATION;
-no such table: STATION
 
 
 

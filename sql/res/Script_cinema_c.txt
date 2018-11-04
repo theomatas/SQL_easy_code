@@ -9,6 +9,7 @@ CREATE TABLE Artiste (
    Annee_naissance decimal(4,0),
    PRIMARY KEY (Nom)
 );
+table Artiste already exists
 
 
 
@@ -17,90 +18,119 @@ CREATE TABLE Artiste (
 
 
 INSERT INTO Artiste VALUES( 'Allen', 'Woody', '1938');
+UNIQUE constraint failed: Artiste.Nom
 
 
 INSERT INTO Artiste VALUES( 'Lynch', 'David', '1946');
+UNIQUE constraint failed: Artiste.Nom
 
 
 INSERT INTO Artiste VALUES( 'Kusturica', 'Emir', '1959');
+UNIQUE constraint failed: Artiste.Nom
 
 
 INSERT INTO Artiste VALUES( 'Lang', 'Fritz', '1899');
+UNIQUE constraint failed: Artiste.Nom
 
 
 INSERT INTO Artiste VALUES( 'Eastwood', 'Clint', '1932');
+UNIQUE constraint failed: Artiste.Nom
 
 
 INSERT INTO Artiste VALUES( 'Hitchcock', 'Alfred', '1898');
+UNIQUE constraint failed: Artiste.Nom
 
 
 INSERT INTO Artiste VALUES( 'Kubrick', 'Stanley', '1935');
+UNIQUE constraint failed: Artiste.Nom
 
 
 INSERT INTO Artiste VALUES( 'Curtis', 'Michael', '1902');
+UNIQUE constraint failed: Artiste.Nom
 
 
 INSERT INTO Artiste VALUES( 'Stewart', 'James', '1911');
+UNIQUE constraint failed: Artiste.Nom
 
 
 INSERT INTO Artiste VALUES( 'Novak', 'Kim', NULL);
+UNIQUE constraint failed: Artiste.Nom
 
 
 INSERT INTO Artiste VALUES( 'Hunt', 'Greg', '1950');
+UNIQUE constraint failed: Artiste.Nom
 
 
 INSERT INTO Artiste VALUES( 'Tarantino', 'Quentin', '1948');
+UNIQUE constraint failed: Artiste.Nom
 
 
 INSERT INTO Artiste VALUES( 'Willis', 'Bruce', '1952');
+UNIQUE constraint failed: Artiste.Nom
 
 
 INSERT INTO Artiste VALUES( 'Spielberg', 'Steven', '1943');
+UNIQUE constraint failed: Artiste.Nom
 
 
 INSERT INTO Artiste VALUES( 'Hudson', 'Hugh', NULL);
+UNIQUE constraint failed: Artiste.Nom
 
 
 INSERT INTO Artiste VALUES( 'Gillian', 'Terry', '1944');
+UNIQUE constraint failed: Artiste.Nom
 
 
 INSERT INTO Artiste VALUES( 'Truffaut', 'Francois', '1938');
+UNIQUE constraint failed: Artiste.Nom
 
 
 INSERT INTO Artiste VALUES( 'Lambert', 'Christophe', '1953');
+UNIQUE constraint failed: Artiste.Nom
 
 
 INSERT INTO Artiste VALUES( 'Keitel', 'Harvey', '1940');
+UNIQUE constraint failed: Artiste.Nom
 
 
 INSERT INTO Artiste VALUES( 'Woo', 'John', '1951');
+UNIQUE constraint failed: Artiste.Nom
 
 
 INSERT INTO Artiste VALUES( 'Travolta', 'John', '1953');
+UNIQUE constraint failed: Artiste.Nom
 
 
 INSERT INTO Artiste VALUES( 'Cage', 'Nicolas', '1954');
+UNIQUE constraint failed: Artiste.Nom
 
 
 INSERT INTO Artiste VALUES( 'DiCaprio', 'Leonardo', '1973');
+UNIQUE constraint failed: Artiste.Nom
 
 
 INSERT INTO Artiste VALUES( 'Cameron', 'James', '1943');
+UNIQUE constraint failed: Artiste.Nom
 
 
 INSERT INTO Artiste VALUES( 'Cruise', 'Tom', '1960');
+UNIQUE constraint failed: Artiste.Nom
 
 
 INSERT INTO Artiste VALUES( 'De Palma', 'Brian', '1953');
+UNIQUE constraint failed: Artiste.Nom
 
 
 INSERT INTO Artiste VALUES( 'Depp', 'Johnny', '1967');
+UNIQUE constraint failed: Artiste.Nom
 
 
 INSERT INTO Artiste VALUES( 'Ricci', 'Christina', '1974');
+UNIQUE constraint failed: Artiste.Nom
 
 
 INSERT INTO Artiste VALUES( 'Burton', 'Tim', '1958');
+UNIQUE constraint failed: Artiste.Nom
 
 
 
@@ -115,6 +145,7 @@ CREATE TABLE Cinema (
    Adresse varchar(30),
    PRIMARY KEY (Nom_cinema)
 );
+table Cinema already exists
 
 
 
@@ -123,15 +154,19 @@ CREATE TABLE Cinema (
 
 
 INSERT INTO Cinema VALUES( 'Rex', '2', '22 Bd Poissoniere');
+UNIQUE constraint failed: Cinema.Nom_cinema
 
 
 INSERT INTO Cinema VALUES( 'Kino', '15', '3 Bd Raspail');
+UNIQUE constraint failed: Cinema.Nom_cinema
 
 
 INSERT INTO Cinema VALUES( 'Nations', '12', '3 Rue de Reuilly');
+UNIQUE constraint failed: Cinema.Nom_cinema
 
 
 INSERT INTO Cinema VALUES( 'Halles', '1', 'Forum des Halles');
+UNIQUE constraint failed: Cinema.Nom_cinema
 
 
 
@@ -145,6 +180,7 @@ CREATE TABLE Film (
    Nom_Realisateur varchar(20),
    PRIMARY KEY (ID_film)
 );
+table Film already exists
 
 
 
@@ -153,84 +189,111 @@ CREATE TABLE Film (
 
 
 INSERT INTO Film VALUES( '10', 'Annie Hall', '1977', 'Allen');
+UNIQUE constraint failed: Film.ID_film
 
 
 INSERT INTO Film VALUES( '57', 'Brazil', '1984', 'Gillian');
+UNIQUE constraint failed: Film.ID_film
 
 
 INSERT INTO Film VALUES( '5', 'Underground', '1995', 'Kusturica');
+UNIQUE constraint failed: Film.ID_film
 
 
 INSERT INTO Film VALUES( '38', 'Metropolis', '1926', 'Lang');
+UNIQUE constraint failed: Film.ID_film
 
 
 INSERT INTO Film VALUES( '45', 'Impitoyable', '1992', 'Eastwood');
+UNIQUE constraint failed: Film.ID_film
 
 
 INSERT INTO Film VALUES( '65', 'Vertigo', '1958', 'Hitchcock');
+UNIQUE constraint failed: Film.ID_film
 
 
 INSERT INTO Film VALUES( '7', 'Shining', '1980', 'Kubrick');
+UNIQUE constraint failed: Film.ID_film
 
 
 INSERT INTO Film VALUES( '6', 'Psychose', '1960', 'Hitchcock');
+UNIQUE constraint failed: Film.ID_film
 
 
 INSERT INTO Film VALUES( '3', 'Twin Peaks', '1990', 'Lynch');
+UNIQUE constraint failed: Film.ID_film
 
 
 INSERT INTO Film VALUES( '90', 'Casablanca', '1942', 'Curtis');
+UNIQUE constraint failed: Film.ID_film
 
 
 INSERT INTO Film VALUES( '85', 'Greystocke', '1984', 'Hudson');
+UNIQUE constraint failed: Film.ID_film
 
 
 INSERT INTO Film VALUES( '89', 'Le dernier metro', '1980', 'Truffaut');
+UNIQUE constraint failed: Film.ID_film
 
 
 INSERT INTO Film VALUES( '1', 'Reservoir Dogs', '1992', 'Tarantino');
+UNIQUE constraint failed: Film.ID_film
 
 
 INSERT INTO Film VALUES( '43', 'Manhattan', '1979', 'Allen');
+UNIQUE constraint failed: Film.ID_film
 
 
 INSERT INTO Film VALUES( '11', 'Jurassic Park', '1992', 'Spielberg');
+UNIQUE constraint failed: Film.ID_film
 
 
 INSERT INTO Film VALUES( '32', 'Rencontres du 3eme type', '1978', 'Spielberg');
+UNIQUE constraint failed: Film.ID_film
 
 
 INSERT INTO Film VALUES( '33', 'Piege de cristal', '1990', 'Hunt');
+UNIQUE constraint failed: Film.ID_film
 
 
 INSERT INTO Film VALUES( '34', 'Une journee en enfer', '1994', 'Hunt');
+UNIQUE constraint failed: Film.ID_film
 
 
 INSERT INTO Film VALUES( '35', '48 minutes pour vivre', '1992', 'Hunt');
+UNIQUE constraint failed: Film.ID_film
 
 
 INSERT INTO Film VALUES( '73', 'Pulp Fiction', '1995', 'Tarantino');
+UNIQUE constraint failed: Film.ID_film
 
 
 INSERT INTO Film VALUES( '101', 'Broken Arrow', '1996', 'Woo');
+UNIQUE constraint failed: Film.ID_film
 
 
 INSERT INTO Film VALUES( '102', 'Volte-Face', '1997', 'Woo');
+UNIQUE constraint failed: Film.ID_film
 
 
 INSERT INTO Film VALUES( '104', 'Titanic', '1998', 'Cameron');
+UNIQUE constraint failed: Film.ID_film
 
 
 INSERT INTO Film VALUES( '135', 'Mission Impossible 2', '2000', 'Woo');
+UNIQUE constraint failed: Film.ID_film
 
 
 INSERT INTO Film VALUES( '136', 'Mission Impossible', '1997', 'De Palma');
+UNIQUE constraint failed: Film.ID_film
 
 
 INSERT INTO Film VALUES( '142', 'Edward scissorhands', '1990', 'Burton');
+UNIQUE constraint failed: Film.ID_film
 
 
 INSERT INTO Film VALUES( '141', 'Sleepy Hollow', '1999', 'Burton');
+UNIQUE constraint failed: Film.ID_film
 
 
 
@@ -243,6 +306,7 @@ CREATE TABLE Role (
    Nom_acteur varchar(20) NOT NULL,
    PRIMARY KEY (ID_film, Nom_acteur)
 );
+table Role already exists
 
 
 
@@ -251,75 +315,99 @@ CREATE TABLE Role (
 
 
 INSERT INTO Role VALUES( 'Bernard', '32', 'Truffaut');
+UNIQUE constraint failed: Role.ID_film, Role.Nom_acteur
 
 
 INSERT INTO Role VALUES( 'Davis', '43', 'Allen');
+UNIQUE constraint failed: Role.ID_film, Role.Nom_acteur
 
 
 INSERT INTO Role VALUES( 'Tarzan', '85', 'Lambert');
+UNIQUE constraint failed: Role.ID_film, Role.Nom_acteur
 
 
 INSERT INTO Role VALUES( 'Ferguson', '65', 'Stewart');
+UNIQUE constraint failed: Role.ID_film, Role.Nom_acteur
 
 
 INSERT INTO Role VALUES( 'Elster', '65', 'Novak');
+UNIQUE constraint failed: Role.ID_film, Role.Nom_acteur
 
 
 INSERT INTO Role VALUES( 'Jonas', '10', 'Allen');
+UNIQUE constraint failed: Role.ID_film, Role.Nom_acteur
 
 
 INSERT INTO Role VALUES( 'McLane', '33', 'Willis');
+UNIQUE constraint failed: Role.ID_film, Role.Nom_acteur
 
 
 INSERT INTO Role VALUES( 'McLane', '34', 'Willis');
+UNIQUE constraint failed: Role.ID_film, Role.Nom_acteur
 
 
 INSERT INTO Role VALUES( 'McLane', '35', 'Willis');
+UNIQUE constraint failed: Role.ID_film, Role.Nom_acteur
 
 
 INSERT INTO Role VALUES( 'Mr Brown', '1', 'Tarantino');
+UNIQUE constraint failed: Role.ID_film, Role.Nom_acteur
 
 
 INSERT INTO Role VALUES( 'Munny', '45', 'Eastwood');
+UNIQUE constraint failed: Role.ID_film, Role.Nom_acteur
 
 
 INSERT INTO Role VALUES( 'Mr White', '1', 'Keitel');
+UNIQUE constraint failed: Role.ID_film, Role.Nom_acteur
 
 
 INSERT INTO Role VALUES( 'Wolf', '73', 'Keitel');
+UNIQUE constraint failed: Role.ID_film, Role.Nom_acteur
 
 
 INSERT INTO Role VALUES( 'Coolidge', '73', 'Willis');
+UNIQUE constraint failed: Role.ID_film, Role.Nom_acteur
 
 
 INSERT INTO Role VALUES( 'Vega', '73', 'Travolta');
+UNIQUE constraint failed: Role.ID_film, Role.Nom_acteur
 
 
 INSERT INTO Role VALUES( 'Deakins', '101', 'Travolta');
+UNIQUE constraint failed: Role.ID_film, Role.Nom_acteur
 
 
 INSERT INTO Role VALUES( 'Archer', '102', 'Travolta');
+UNIQUE constraint failed: Role.ID_film, Role.Nom_acteur
 
 
 INSERT INTO Role VALUES( 'Troy', '102', 'Cage');
+UNIQUE constraint failed: Role.ID_film, Role.Nom_acteur
 
 
 INSERT INTO Role VALUES( 'Dowson', '104', 'DiCaprio');
+UNIQUE constraint failed: Role.ID_film, Role.Nom_acteur
 
 
 INSERT INTO Role VALUES( 'Howard', '135', 'Cruise');
+UNIQUE constraint failed: Role.ID_film, Role.Nom_acteur
 
 
 INSERT INTO Role VALUES( 'Howard', '136', 'Cruise');
+UNIQUE constraint failed: Role.ID_film, Role.Nom_acteur
 
 
 INSERT INTO Role VALUES( 'Crane', '141', 'Depp');
+UNIQUE constraint failed: Role.ID_film, Role.Nom_acteur
 
 
 INSERT INTO Role VALUES( 'Edward', '142', 'Depp');
+UNIQUE constraint failed: Role.ID_film, Role.Nom_acteur
 
 
 INSERT INTO Role VALUES( 'Van Tassel', '141', 'Ricci');
+UNIQUE constraint failed: Role.ID_film, Role.Nom_acteur
 
 
 
@@ -333,6 +421,7 @@ CREATE TABLE Salle (
    Capacite decimal(4,0),
    PRIMARY KEY (Nom_cinema, No_salle)
 );
+table Salle already exists
 
 
 
@@ -340,42 +429,55 @@ CREATE TABLE Salle (
 
 
 INSERT INTO Salle VALUES( 'Rex', '1', 'O', '150');
+UNIQUE constraint failed: Salle.Nom_cinema, Salle.No_salle
 
 
 INSERT INTO Salle VALUES( 'Rex', '2', 'O', '100');
+UNIQUE constraint failed: Salle.Nom_cinema, Salle.No_salle
 
 
 INSERT INTO Salle VALUES( 'Rex', '3', 'N', '80');
+UNIQUE constraint failed: Salle.Nom_cinema, Salle.No_salle
 
 
 INSERT INTO Salle VALUES( 'Rex', '4', 'N', '80');
+UNIQUE constraint failed: Salle.Nom_cinema, Salle.No_salle
 
 
 INSERT INTO Salle VALUES( 'Kino', '1', 'N', '280');
+UNIQUE constraint failed: Salle.Nom_cinema, Salle.No_salle
 
 
 INSERT INTO Salle VALUES( 'Kino', '2', 'O', '120');
+UNIQUE constraint failed: Salle.Nom_cinema, Salle.No_salle
 
 
 INSERT INTO Salle VALUES( 'Kino', '3', 'O', '130');
+UNIQUE constraint failed: Salle.Nom_cinema, Salle.No_salle
 
 
 INSERT INTO Salle VALUES( 'Nations', '1', 'O', '130');
+UNIQUE constraint failed: Salle.Nom_cinema, Salle.No_salle
 
 
 INSERT INTO Salle VALUES( 'Nations', '2', 'N', '90');
+UNIQUE constraint failed: Salle.Nom_cinema, Salle.No_salle
 
 
 INSERT INTO Salle VALUES( 'Nations', '3', 'N', '60');
+UNIQUE constraint failed: Salle.Nom_cinema, Salle.No_salle
 
 
 INSERT INTO Salle VALUES( 'Halles', '1', 'O', '75');
+UNIQUE constraint failed: Salle.Nom_cinema, Salle.No_salle
 
 
 INSERT INTO Salle VALUES( 'Halles', '2', 'N', '60');
+UNIQUE constraint failed: Salle.Nom_cinema, Salle.No_salle
 
 
 INSERT INTO Salle VALUES( 'Halles', '3', 'N', '60');
+UNIQUE constraint failed: Salle.Nom_cinema, Salle.No_salle
 
 
 
@@ -391,6 +493,7 @@ CREATE TABLE Seance (
    ID_film decimal(10,0) DEFAULT '0' NOT NULL,
    PRIMARY KEY (Nom_cinema, No_salle, No_seance)
 );
+table Seance already exists
 
 
 
@@ -398,123 +501,163 @@ CREATE TABLE Seance (
 
 
 INSERT INTO Seance VALUES( 'Rex', '1', '3', '9.99', '9.99', '1');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Rex', '1', '4', '9.99', '9.99', '6');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Rex', '2', '1', '9.99', '9.99', '34');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Rex', '2', '2', '9.99', '9.99', '34');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Rex', '2', '3', '9.99', '9.99', '7');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Rex', '2', '4', '9.99', '9.99', '65');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Rex', '3', '1', '9.99', '9.99', '11');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Rex', '3', '2', '9.99', '9.99', '11');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Rex', '3', '3', '9.99', '9.99', '11');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Rex', '4', '1', '9.99', '9.99', '38');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Rex', '4', '2', '9.99', '9.99', '38');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Rex', '4', '3', '9.99', '9.99', '38');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Kino', '1', '1', '9.99', '9.99', '34');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Kino', '1', '2', '9.99', '9.99', '73');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Kino', '1', '3', '9.99', '9.99', '34');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Kino', '2', '1', '9.99', '9.99', '43');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Kino', '2', '2', '9.99', '9.99', '7');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Kino', '2', '3', '9.99', '9.99', '43');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Kino', '3', '1', '9.99', '9.99', '101');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Kino', '3', '2', '9.99', '9.99', '102');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Kino', '3', '3', '9.99', '9.99', '104');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Kino', '3', '4', '9.99', '9.99', '104');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Nations', '1', '1', '9.99', '9.99', '65');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Nations', '1', '2', '9.99', '9.99', '65');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Nations', '1', '3', '9.99', '9.99', '65');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Nations', '2', '1', '9.99', '9.99', '43');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Nations', '2', '2', '9.99', '9.99', '43');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Nations', '2', '3', '9.99', '9.99', '43');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Nations', '3', '1', '9.99', '9.99', '7');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Nations', '3', '2', '9.99', '9.99', '7');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Nations', '3', '3', '9.99', '9.99', '7');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Halles', '1', '1', '9.99', '9.99', '32');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Halles', '1', '2', '9.99', '9.99', '32');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Halles', '1', '3', '9.99', '9.99', '32');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Halles', '2', '1', '9.99', '9.99', '5');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Halles', '2', '2', '9.99', '9.99', '5');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Halles', '2', '3', '9.99', '9.99', '45');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Halles', '3', '1', '9.99', '9.99', '3');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Halles', '3', '2', '9.99', '9.99', '3');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 INSERT INTO Seance VALUES( 'Halles', '3', '3', '9.99', '9.99', '3');
+UNIQUE constraint failed: Seance.Nom_cinema, Seance.No_salle, Seance.No_seance
 
 
 
@@ -819,6 +962,17 @@ GROUP BY Nom_cinema HAVING COUNT(Climatise) > 1;
 
 
 -- 4/6
+
+SELECT Nom,Prenom 
+FROM artiste WHERE Nom IN (SELECT Nom_acteur 
+FROM (SELECT ID_film, Nom_acteur,COUNT(Nom_acteur) AS counter 
+FROM (SELECT ID_film, Nom_acteur 
+FROM role WHERE ID_Film IN (SELECT ID_Film 
+FROM film WHERE Annee > 1984)) GROUP BY Nom_acteur) WHERE counter >= 3);
+(u'Travolta', u'John')
+(u'Willis', u'Bruce')
+
+
 
 -- 5/1
 

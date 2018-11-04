@@ -1,0 +1,17 @@
+SELECT Nom_cinema FROM (SELECT Nom_cinema,count(Nom_cinema) AS number_c FROM (SELECT Nom_cinema From 
+(SELECT ID_film AS ID_fc,Nom_Cinema FROM Seance) 
+INNER JOIN film 
+ON film.ID_film = ID_fc AND Nom_Realisateur = 'Kubrick') 
+GROUP BY Nom_cinema), (SELECT count(*) as number_k FROM
+(SELECT * FROM film WHERE Nom_Realisateur = 'Kubrick'))
+WHERE number_k <= number_c;
+
+
+SELECT count(*) as number FROM
+(SELECT * FROM film WHERE Nom_Realisateur = 'Kubrick');
+
+
+SELECT Nom_cinema From 
+(SELECT ID_film AS ID_fc,Nom_Cinema FROM Seance) 
+INNER JOIN film 
+ON film.ID_film = ID_fc AND Nom_Realisateur = 'Kubrick';

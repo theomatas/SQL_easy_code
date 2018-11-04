@@ -26,7 +26,8 @@ def main():
             print(filename + " succesfully threat " + filename[0:-4] + "_c.txt" + " created")
         except Exception as e:
             print("error during read or write " + filename + " type: " + e)
-            
+
+
         
 def parser(text):
     lst = []
@@ -43,4 +44,5 @@ def parser(text):
     
 main()
 input("\nPRESS ENTER TO CLOSE\n")
+
 print("*** CLOSE ***")
